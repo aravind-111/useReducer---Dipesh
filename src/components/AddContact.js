@@ -12,6 +12,10 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "add":
       return [...state, action.payload];
+    case "delete":
+      return state.filter((data) => {
+        return data.id !== action.payload.id;
+      });
   }
 };
 
@@ -49,7 +53,18 @@ function AddContact() {
       <button onClick={addContact}>Submit</button>
       <div>
         {contact.map((data) => {
-          return <p>{data.name}</p>;
+          return (
+            <div key={data.id}>
+              <p>{data.name}</p>
+              <button
+                onClick={() =>
+                  dispatch({ type: "delete", payload: { id: data.id } })
+                }
+              >
+                Delete
+              </button>
+            </div>
+          );
         })}
       </div>
     </div>
