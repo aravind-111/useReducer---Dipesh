@@ -1,5 +1,6 @@
 import AddContact from "./components/AddContact";
 import Count from "./components/Count";
+import UseCallback from "./components/useCallback";
 import UseMemo from "./components/UseMemo";
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
     <div>
       {/* <Count /> */}
       {/* <AddContact /> */}
-      <UseMemo />
+      {/* <UseMemo /> */}
+      <UseCallback />
     </div>
   );
 }
