@@ -1,9 +1,11 @@
-import UseReducer from "./components/UseReducer";
+import AddContact from "./components/AddContact";
+import Count from "./components/Count";
 
 function App() {
   return (
     <div>
-      <UseReducer />
+      {/* <Count /> */}
+      <AddContact />
     </div>
   );
 }
